@@ -1,14 +1,15 @@
 /* font-family: 'Big Shoulders Display', sans-serif;
 font-family: 'Lexend Deca', sans-serif; */
 body{
-    font-size: 15px;
+    font-size: 0.9375em;
 }
 .container{
-    height: 95vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
 
 }
 .sedans{
@@ -28,6 +29,7 @@ body{
     padding: 2rem;  
     
 }
+
 p{
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
@@ -35,53 +37,92 @@ p{
     font-size: 0.7rem;
     font-stretch: expanded;
     margin: 0;
-    padding: 10px 0;
+    padding: 0.625em 0;
     min-height: 2rem;
-    word-spacing: 2px;
-    width: 200px;
-    line-height: 20px;
+    word-spacing: 0.125rem;
+    max-width: 12.5rem;
+    line-height: 1.25rem;
     word-wrap: break-word;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 h2{
     font-family: 'Big Shoulders Display', sans-serif;
     font-weight: 700;
     color: hsl(0, 0%, 95%);
-    font-size: 1.5rem;
+    font-size: 2.3em;
+    min-width: 4rem;
+    margin-bottom: 0.5rem;
 }
 img{
-    height: 28px;
+    min-height: 1rem;
+    min-width: 2rem;
+    max-width: 3.5rem;
+    margin-top: 0;
+    padding-top: 0;
+    
 }
 button{
     background: hsl(0, 0%, 95%);
     text-decoration: none;
     border: none;
-    font-size: 11px;
+    font-size: 0.68em;
     border-radius: 15px;
-    padding: 10px 25px;
+    padding: 0.625rem 1.56rem ;
     font-family: 'Lexend Deca', sans-serif;
+    cursor: pointer;
 }
-p,
-h2,
-button,
-img{
-    margin: 0.5rem;
-    margin-top: 1rem;
+.sedans button:hover {
+    background: transparent;
+    outline: 1px solid hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
 }
-p{
-    margin-bottom: 0;
-    padding-bottom: 0;
+.suvs button:hover {
+    background: hsl(184, 100%, 22%);
+    outline: 1px solid hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
+
 }
-img{
-    margin-top: 0;
-    padding-top: 0;
+.luxury button:hover {
+    background: hsl(179, 100%, 13%);
+    outline: 1px solid hsl(0, 0%, 95%);
+    
 }
 
 
 
 
+@media (min-width: 27.3125em){
+    .sedans,
+    .suvs,
+    .luxury{
+    padding: 2rem;
+    margin: 0;  
+    
+}
+}
 
-@media (min-width: 376px){
+
+@media (min-width: 760px){
+    .container{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    }
+    .sedans,
+    .suvs,
+    .luxury{
+        max-width: 10.62rem;
+        
+    }
+
+    .sedans{
+        border-radius: 5px 0 0 5px;
+    }
+    .luxury{
+        border-radius: 0 5px 5px 0;
+    }
     p{
-        color:red;
+        margin-bottom: 3rem;
     }
 }
